@@ -13,7 +13,7 @@ const scopes = [
   "user-top-read",
   "user-modify-playback-state",
 ];
-
+//split the token from url
 export const getTokenFromRequest = () => {
   return window.location.hash
     .substring(1)

@@ -7,3 +7,9 @@
   color: white;
   background-color: #040404;
 }
+.sidebar__logo {
+  object-fit: contain;
+  height: 60px;
+  padding: 10px;
+  margin-right: auto;
+}

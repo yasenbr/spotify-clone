@@ -9,8 +9,7 @@ import "./App.css";
 const spotify = new SpotifyWebApi();
 
 function App() {
-  const [token, setToken] = useState(null);
-  const [{}, dispatch] = useDataLayerValue();
+  const [{ user, token }, dispatch] = useDataLayerValue();
   //run code based on condition in this condition is change on the URL
   useEffect(() => {
     const hash = getTokenFromRequest();
@@ -18,17 +17,22 @@ function App() {
     const _token = hash.access_token;
 
     if (_token) {
-      setToken(_token);
+      dispatch({
+          type: 'SET_TOKEN',
+          token: _token,
+        })
 
       spotify.setAccessToken(_token);
       spotify.getMe().then((user) => {
-        console.log(":)", user);
+
+        dispatch({
+          type: 'SET_USER',
+          user: user,
+        })
       });
     }
-
-    console.log("Token:", token);
   }, []);
-  return <div className="app">{token ? <Player /> : <Login />}</div>;
+  return <div className="app">{token ? <Player spotify={spotify}/> : <Login />}</div>;
 }
 
 export default App;

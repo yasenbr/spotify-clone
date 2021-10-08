@@ -9,6 +9,7 @@ import "../css/Sidebar.css";
 function Sidebar() {
   const [{ playlists }, dispatch] = useDataLayerValue();
   console.log(playlists);
+
   return (
     <div className="sidebar">
       <img
@@ -16,15 +17,15 @@ function Sidebar() {
         src="https://getheavy.com/wp-content/uploads/2019/12/spotify2019-830x350.jpg"
         alt=""
       />
-      <SidebardOption Icon={HomeIcon} title="Home" />
-      <SidebardOption Icon={SearchIcon} title="Search" />
-      <SidebardOption Icon={LibraryMusicIcon} title="Your Library" />
-      <strong className="sidebar__title">PLAYLIST</strong>
+      <SidebardOption Icon={HomeIcon} option="Home" />
+      <SidebardOption Icon={SearchIcon} option="Search" />
+      <SidebardOption Icon={LibraryMusicIcon} option="Your Library" />
+      <br />
+      <strong className="sidebar__title">PLAYLISTS</strong>
       <hr />
-
-      {/* {playlists?.items?.map((playlist) => (
-        <SidebardOption title={playlist.name} />
-      ))} */}
+      {playlists?.items?.map((playlist) => (
+        <SidebardOption option={playlist.name} />
+      ))}
     </div>
   );
 }

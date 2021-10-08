@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Login from "./components/Login.js";
 import Player from "./components/Player.js";
 import { getTokenFromRequest } from "./services/spotify.js";
@@ -9,7 +9,7 @@ import "./App.css";
 const spotify = new SpotifyWebApi();
 
 function App() {
-  const [{ user, token }, dispatch] = useDataLayerValue();
+  const [{ token }, dispatch] = useDataLayerValue();
   //run code based on condition in this condition is change on the URL
   useEffect(() => {
     const hash = getTokenFromRequest();

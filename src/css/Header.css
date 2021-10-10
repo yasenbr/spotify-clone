@@ -1,0 +1,40 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.header__right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  border-radius: 30px !important;
+  padding: 1px;
+  font-size: 14px;
+}
+
+.header__left {
+  flex: 0.5;
+  min-width: 70px;
+  display: flex;
+  background-color: white;
+  padding: 10px;
+  height: 20px;
+  border-radius: 30px;
+  color: gray;
+  align-items: center;
+}
+
+.header__left > input {
+  border: none;
+  width: 100%;
+}
+
+.header__right > h4 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.avatar {
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15) !important;
+}

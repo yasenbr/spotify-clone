@@ -6,13 +6,12 @@
   flex: 0.8;
   color: white;
   background: linear-gradient(transparent, rgba(0, 0, 0, 1));
-  background-color: rgb(91, 87, 115);
+  background-color: rgb(50 49 52 / 81%);
 }
 
 .body::-webkit-scrollbar {
   display: none;
 }
-
 .body__info {
   display: flex;
   align-items: flex-end;
@@ -24,7 +23,7 @@
   margin-left: 50px;
   margin-top: 20px;
   margin-bottom: 20px;
-  color: green;
+  color: #1db954;
   border-radius: 50%;
 }
 .body__shuffle__background {
@@ -58,23 +57,30 @@
 .body__songs {
   z-index: 1;
   margin: 20px -30px;
+  background: #121212;
 }
 
 .body__info > img {
-  height: 20vw;
-  margin: 0 20px;
+  height: 232px;
+  min-width: 232px;
+  width: 232px;
+  margin: 0 20px 0 0;
   box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
 }
 
 .body__infoText {
   flex: 1;
+  font-size: 12px;
+  margin-top: 4px;
 }
 
 .body__infoText > h2 {
-  font-size: 48px;
+  font-size: 96px;
+  line-height: 96px;
   margin-bottom: 10px;
 }
 
 .body__infoText > p {
-  font-size: 14px;
+  font-size: 12px;
+  margin-top: 4px;
 }

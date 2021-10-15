@@ -57,6 +57,11 @@ function Body({ spotify }) {
           <strong>PLAYLIST</strong>
           <h2>Discover Weekly</h2>
           <p>{discover_weekly?.description}</p>
+          <p>
+            <strong>{discover_weekly?.owner.display_name}</strong> .
+            {discover_weekly?.followers.total} Like .
+            {discover_weekly?.tracks.total} songs,
+          </p>
         </div>
       </div>
 

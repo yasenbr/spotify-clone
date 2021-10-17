@@ -5,6 +5,7 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import PlayCircleFilledIcon from "@mui/icons-material/PlayCircleFilled";
 import SongRow from "./SongRow";
+import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import "../css/Body.css";
 
 function Body({ spotify }) {
@@ -74,9 +75,16 @@ function Body({ spotify }) {
           <FavoriteBorderIcon fontSize="large" />
           <MoreHorizIcon />
         </div>
+        <row className="title__bar">
+          <div className="title__bar__size">TITLE</div>
+          <div className="album__bar__size">ALBUM</div>
+          <div className="addDate__bar__size">DATE ADDED</div>
+          <AccessTimeIcon className="duration__bar__size" />
+        </row>
+        <hr />
 
         {discover_weekly?.tracks.items.map((item) => (
-          <SongRow playSong={playSong} track={item.track} />
+          <SongRow playSong={playSong} track={item.track} addDate={item.added_at}/>
         ))}
       </div>
     </div>

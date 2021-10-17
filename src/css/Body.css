@@ -84,3 +84,43 @@
   font-size: 12px;
   margin-top: 4px;
 }
+hr {
+  margin-right: 40px;
+  margin-left: 40px;
+  height: 1px;
+  border: none;
+  background-color: #77889947;
+}
+.title__bar {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 35px;
+  margin-left: 80px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  line-height: 16px;
+  align-items: center;
+  text-transform: uppercase;
+  color: #b3b3b3;
+}
+.title__bar__size {
+  display: flex;
+  flex: 0.4;
+}
+.album__bar__size {
+  display: flex;
+  flex: 0.3;
+}
+.addDate__bar__size {
+  display: flex;
+  flex: 0.2;
+}
+.duration__bar__size {
+  display: flex;
+  flex: 0.1;
+  width: 16px !important;
+  height: 16px !important;
+}

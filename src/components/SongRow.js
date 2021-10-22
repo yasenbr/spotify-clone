@@ -2,6 +2,12 @@ import React from "react";
 import "../css/SongRow.css";
 
 function SongRow({ track, playSong, addDate }) {
+  let state = {
+    myCurrentTime: new Date().toLocaleString(),
+  };
+
+  console.log(state.myCurrentTime);
+
   console.log(track);
   return (
     <div className="songRow" onClick={() => playSong(track.id)}>

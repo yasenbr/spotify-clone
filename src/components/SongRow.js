@@ -2,11 +2,26 @@ import React from "react";
 import "../css/SongRow.css";
 
 function SongRow({ track, playSong, addDate }) {
-  let state = {
-    myCurrentTime: new Date().toLocaleString(),
-  };
+  // let state = {
+  //   myCurrentTime: new Date().toLocaleString(),
+  // };
 
-  console.log(state.myCurrentTime);
+  // console.log(state.myCurrentTime);
+  var myCurrentDate = new Date();
+  var date =
+    myCurrentDate.getFullYear() +
+    "-" +
+    (myCurrentDate.getMonth() + 1) +
+    "-" +
+    myCurrentDate.getDate() +
+    " " +
+    myCurrentDate.getHours() +
+    ":" +
+    myCurrentDate.getMinutes() +
+    ":" +
+    myCurrentDate.getSeconds();
+  const newCurrentDate = "Current Date and Time: " + date;
+  console.log(newCurrentDate);
 
   console.log(track);
   return (
